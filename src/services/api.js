@@ -5,7 +5,6 @@ const instance = createAxiosInstance({
   baseURL: BASE_URL,
 })
 
-
 export default {
   async fetchEmployees(pagination) {
     let endpoint = 'employees'
