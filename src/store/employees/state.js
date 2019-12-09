@@ -6,6 +6,6 @@ export default {
   [PAGINATION]: {
     page: 1,
     limit: 10,
-    pages: null,
+    totalPages: null,
   },
 }
