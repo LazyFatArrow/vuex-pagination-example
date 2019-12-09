@@ -7,15 +7,15 @@ const instance = createAxiosInstance({
 
 
 export default {
-  async fetchEmployees(options) {
+  async fetchEmployees(pagination) {
     let endpoint = 'employees'
 
-    if (options.page) {
-      endpoint = `${endpoint}?page=${options.page}`
+    if (pagination.page) {
+      endpoint = `${endpoint}?page=${pagination.page}`
     }
 
-    if (options.limit) {
-      endpoint = `${endpoint}&limit=${options.limit}`
+    if (pagination.limit) {
+      endpoint = `${endpoint}&limit=${pagination.limit}`
     }
 
     return (await instance.get(endpoint)).data
